@@ -25,7 +25,10 @@ const allProducts = products.map((item) => item.name);
 console.log(allProducts);
 
 // 3: Fething only the names from the items under the category of Electronics
-let electrnCatergory = [...products].filter((item) => item.category);
-electrnCatergory = category.map((item) => item.name);
-console.log(electrnCatergory);
+const targetCategory = "electronics";
+const electronicNames = products
+  .filter((product) => product.category === targetCategory)
+  .map((product) => product.name);
+
+console.log(electronicNames);
 // Nope need a nap... Fix it later.
