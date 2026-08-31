@@ -21,6 +21,11 @@ console.log(
 );
 
 //2: Fetch only the product names, to get a quick overview:
-products.forEach((item) => {
-  console.log(item.name);
-});
+const allProducts = products.map((item) => item.name);
+console.log(allProducts);
+
+// 3: Fething only the names from the items under the category of Electronics
+let electrnCatergory = [...products].filter((item) => item.category);
+electrnCatergory = category.map((item) => item.name);
+console.log(electrnCatergory);
+// Nope need a nap... Fix it later.
