@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e1fbfb;
+  color: #0e0e0e;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 6rem 4rem 6rem;
+  padding-bottom: 1rem;
+  row-gap: 2rem;
+}
+
+/* Stylyng for the cards I will print the info to */
+.jsCardBox {
+  min-width: 10rem;
+  min-height: 15rem;
+  background-color: #ffebcd;
+  border: 3px #6c2525 solid;
+  border-radius: 1.5rem;
+}

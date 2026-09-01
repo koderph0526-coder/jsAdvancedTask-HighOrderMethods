@@ -1,4 +1,8 @@
-// The products from
+// Fetching the elements needed from html
+const cardCont = document.querySelector(".jsCardsCont");
+const productInfoCard = document.querySelector(".jsCardBox");
+
+// The products from Alvas webshop
 const products = [
   { name: "Smartphone", price: 800, category: "electronics" },
   { name: "Headphones", price: 150, category: "electronics" },
@@ -44,3 +48,22 @@ const sumTotal = products.reduce((sum, item) => {
   return sum + item.price;
 }, 0);
 console.log(sumTotal);
+
+//
+//This code is purely for myself to train more on coding and design
+
+//Starting with the products under 200
+const lowPriceNames = lowToHighPrice.map((item) => item.name).join(", ");
+
+const mediumHeader = document.createTextNode("h2");
+const miniHeader1 = document.createTextNode("h3");
+const title = document.createTextNode("p");
+const price = document.createTextNode("p");
+const divCard = document.createElement("div");
+divCard.classList.add("jsCardBox");
+mediumHeader.textContent = "Organizing and managing assitance";
+miniHeader1.textContent =
+  "Sorting from lowest price to highest within the targetted group";
+title.textContent = lowToHighPrice.map((item) => item.name).join(", ");
+divCard.append(title);
+cardCont.appendChild(divCard);
