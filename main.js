@@ -1,3 +1,4 @@
+// The products from
 const products = [
   { name: "Smartphone", price: 800, category: "electronics" },
   { name: "Headphones", price: 150, category: "electronics" },
@@ -10,7 +11,7 @@ const products = [
 
 //Answering the tasks/missions in turn:
 // 1: We are asked to use a method to find all the items in Alvas shop that cost less than 200
-//I'm going with filter
+//Using .filter to "comb through" the products and their prices
 const lessThan200 = products.filter((item) => item.price < 200);
 //little bonus: Sorting them from lowest price to highest price:
 const lowToHighPrice = [...lessThan200].sort((a, b) => a.price - b.price);
@@ -20,15 +21,22 @@ console.log(
   lowToHighPrice,
 );
 
-//2: Fetch only the product names, to get a quick overview:
+//2: Fetching only the product names, to get a quick overview:
 const allProducts = products.map((item) => item.name);
 console.log(allProducts);
 
 // 3: Fething only the names from the items under the category of Electronics
 const targetCategory = "electronics";
-const electronicNames = products
+const electrnsNames = products
   .filter((product) => product.category === targetCategory)
   .map((product) => product.name);
 
-console.log(electronicNames);
-// Nope need a nap... Fix it later.
+console.log(electrnsNames);
+
+//4: Checking if one or more of the products price is over 1000
+
+const isOver1000 = products.some((product) => product.price > 1000);
+console.log(isOver1000);
+//Atempted using .include() here, but it returned false? Would love to have a closer look at this in a lesson as google searches so far did not manage to explain why.
+
+//5: Calculate the total sum of all the items in products
