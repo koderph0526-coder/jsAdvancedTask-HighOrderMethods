@@ -39,4 +39,8 @@ const isOver1000 = products.some((product) => product.price > 1000);
 console.log(isOver1000);
 //Atempted using .include() here, but it returned false? Would love to have a closer look at this in a lesson as google searches so far did not manage to explain why.
 
-//5: Calculate the total sum of all the items in products
+//5: Calculate the total sum of all the items in products.
+const sumTotal = products.reduce((sum, item) => {
+  return sum + item.price;
+}, 0);
+console.log(sumTotal);
