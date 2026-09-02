@@ -46,7 +46,7 @@ console.log(isOver1000);
 //Atempted using .include() here, but it returned false? Would love to have a closer look at this in a lesson as google searches so far did not manage to explain why.
 
 //5: Calculate the total sum of all the items in products.
-//Using .reduce with sum as a parameter, making it run a function throught the array to combine the price of all the items, and I'm telling it to start at index 0 to control it's starting poiint.
+//Using .reduce with sum as a parameter, making it run a function/loop throught the array to combine the price of all the items, and I'm telling it to start at index 0 to control it's starting poiint.
 const sumTotal = products.reduce((sum, item) => {
   return sum + item.price;
 }, 0);
