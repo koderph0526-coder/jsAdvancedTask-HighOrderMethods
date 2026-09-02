@@ -33,4 +33,15 @@ section {
   background-color: #ffebcd;
   border: 3px #6c2525 solid;
   border-radius: 1.5rem;
+  display: flex;
+}
+
+/* Styling for the bold p elements created in JS, this one is to be used on their titles, may be reused if fitting */
+.boldTitle {
+  font-weight: bold;
+}
+
+.divNames {
+  display: flex;
+  flex-direction: column;
 }
