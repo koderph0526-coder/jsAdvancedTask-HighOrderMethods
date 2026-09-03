@@ -107,8 +107,11 @@ divNames.appendChild(titleN);
 divCard.append(divNames, divPrice, divCategory);
 cardCont.append(mediumHeader, miniHeader1, divCard);
 toBody.append(cardCont);
-// Not working the way I want yet. Idea: Make separate divs with styling to separate name, price and category, append into said divs and then append those divs into the cardDiv?
-// }
-// miniHeader1.textContent =
-//   "Sorting from lowest price to highest within the targetted group";
-// Pushing the divcard To it's container in html
+
+//
+//Printing all the prduct names in in Alvas shop
+
+//Am considering gathering the rest of information on smaller cards all printed in the same div, to still keep simple overview if items are added, and yet save space and time while the shop has fewer items.
+// Perhaps I should attempt finding the the >1000 = true with a different method here as I'm not limited to one method? -> use a function, with a ternary in it, to loop throught and print only if the shop has an item over1000?
+
+// Small break needed, and also need to work on the other JS assigmnet. Will resume this once I'm done with that.
