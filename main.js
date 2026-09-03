@@ -1,6 +1,7 @@
 // Fetching the elements needed from html
 const cardCont = document.querySelector(".jsCardsCont");
-const productInfoCard = document.querySelector(".jsCardBox");
+const productInfoCard = document.querySelector("#jsCardBox");
+const toBody = document.querySelector("main");
 
 // The products from Alvas webshop
 const products = [
@@ -62,17 +63,16 @@ console.log(sumTotal);
 const mediumHeader = document.createTextNode("h2");
 const contextTxt = document.createTextNode("p");
 const titleN = document.createTextNode("p");
-titleN.classList.add("boldTitle");
 const titleP = document.createTextNode("p");
 const titleC = document.createTextNode("p");
 const category = document.createTextNode("p");
 const price = document.createTextNode("p");
 mediumHeader.textContent = "Organizing and managing assitance";
-cardCont.append(mediumHeader);
+// cardCont.append(mediumHeader);
 // for (let item of lowToHighPrice) {
 // Creating the card for each catergory of organizing/managing improvement, adding class too
 const divCard = document.createElement("article");
-divCard.classList.add("jsCardBox");
+divCard.classList.add("jsCardBoxS");
 
 //A little header for the items in their orgnized category in the cards
 const miniHeader1 = document.createTextNode("h3");
@@ -81,18 +81,32 @@ miniHeader1.textContent =
 
 //Styling div for all the title - names
 const divNames = document.createElement("div");
-divNames.classList.add("divNames");
+divNames.classList.add("divNameColumn");
 
-//The Title for each product
-titleN.textContent = `Name ${lessThan200.name}`;
+//The Title, placed in a div for styling
+titleN.textContent = `Name: ${lessThan200.map((item) => item.name).join(", ")}`;
+// titleN.classList.add("boldTitle");
 
-//The price:
-titleP.textContent = `Price: ${lessThan200.price}`;
-//
-div;
-divNames.append(titleN);
-divCard.append(miniHeader1);
-cardCont.append(divCard);
+//The price, placed in a div for styling
+const divPrice = document.createElement("div");
+divPrice.classList.add("divPriceColumn");
+titleP.textContent = `Price: ${lessThan200.map((item) => item.price).join(", ")}`;
+
+//The category, placed in a div for styling
+const divCategory = document.createElement("div");
+divCategory.classList.add("divCategoryColumn");
+titleC.textContent = `Category: ${lessThan200
+  .map((item) => item.category)
+  .join(", ")
+  .toUpperCase()}`;
+
+//Appending alle items to the html document
+divCategory.appendChild(titleC);
+divPrice.appendChild(titleP);
+divNames.appendChild(titleN);
+divCard.append(divNames, divPrice, divCategory);
+cardCont.append(mediumHeader, miniHeader1, divCard);
+toBody.append(cardCont);
 // Not working the way I want yet. Idea: Make separate divs with styling to separate name, price and category, append into said divs and then append those divs into the cardDiv?
 // }
 // miniHeader1.textContent =

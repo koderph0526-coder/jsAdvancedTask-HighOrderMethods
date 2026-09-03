@@ -18,22 +18,29 @@ main {
   gap: 3rem;
 }
 
+h1 {
+  text-align: center;
+}
+
 section {
   display: flex;
   flex-direction: column;
-  margin: 4rem 6rem 4rem 6rem;
+  margin: 3rem 10rem;
   padding-bottom: 1rem;
   row-gap: 2rem;
 }
 
 /* Stylyng for the cards I will print the info to */
-.jsCardBox {
-  min-width: 10rem;
-  min-height: 15rem;
+.jsCardBoxS {
+  min-width: 9rem;
+  min-height: 10rem;
   background-color: #ffebcd;
   border: 3px #6c2525 solid;
   border-radius: 1.5rem;
   display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+  padding: 2rem;
 }
 
 /* Styling for the bold p elements created in JS, this one is to be used on their titles, may be reused if fitting */
@@ -41,7 +48,20 @@ section {
   font-weight: bold;
 }
 
-.divNames {
+.divNameColumn {
   display: flex;
   flex-direction: column;
+  width: 6rem;
+}
+
+.divPriceColumn {
+  display: flex;
+  flex-direction: column;
+  width: 2.5rem;
+}
+
+.divCategoryColumn {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
 }
